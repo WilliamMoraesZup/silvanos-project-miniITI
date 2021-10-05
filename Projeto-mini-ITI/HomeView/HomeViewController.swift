@@ -11,7 +11,7 @@ struct HomeViewController {
     
     func startMainMenu(){
         
-      
+        
         /**
          a funçao faz um loop e a cada passagem do loop ele chama o menu principal.
          o loop chama o menu principal
@@ -24,25 +24,25 @@ struct HomeViewController {
          
          */
         
-       let homeView = HomeView()
+        let homeView = HomeView()
         
         while (true) {
             // esse view retorna o numero escolhido no menu principal
             let userSelection = homeView.showMainMenu()
             
             if let validSelected = userSelection  {
-         if(  selectedHandler(option: validSelected) == false)
-         {
-            continue
-         }
-         else {
-            break
-         }
+                if(  selectedHandler(option: validSelected) == false)
+                {
+                    continue
+                }
+                else {
+                    break
+                }
             }
             
             continue
         }
-                
+        
         
     }
     
@@ -51,19 +51,22 @@ struct HomeViewController {
         
         switch option {
         case 1:
-            print("entrando no sistema")
+            print("chamar view de login")
             
         case 2:
             NewUserController().startForm()
             
         case 3:
             print("SAIR")
+        
+        case 4:
+        
+            Database.instance.userDB.forEach{ print ($0.account )}
+            
             
         default:
             print("""
-opçao invalida
-tente novamente..
-
+chamar view de opçao incorreta
 """)
             return false
         }

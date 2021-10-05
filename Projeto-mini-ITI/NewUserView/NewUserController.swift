@@ -10,29 +10,34 @@ import Foundation
 
 struct NewUserController{
     
-    
-    
     func startForm(){
         let newUserView = NewUserView()
       
         var validName : String?
         var validDocument : String?
         
-        
         while true {
             if let name = newUserView.inputName(), name.count > 2 {
                 validName = name
                 break
             }
+            
            else {
             newUserView.errorName()
-            
             continue
            }
         }
         
         while true {
-            if let document = newUserView.inputDocumentNumber(), document.count == 11, document.isCPF {
+            if let document = newUserView.inputDocumentNumber() {
+                //, document.count == 11{  , document.isCPF
+                if Database.instance.documentAlreadyExists(value: document){
+                    newUserView.errorDocumentAlreadyExists()
+             //Aqui devo colocar um CONTINUE
+             // Porem preciso usar algum comando para sair da tela
+                    HomeViewController().startMainMenu()
+                    
+                }
                 validDocument = document
                 break
             }
@@ -48,7 +53,21 @@ struct NewUserController{
         guard let unwrapUser = newUser else {
           return  print("TO-DO error, show system error")
         }
+
+        // salva no banco de dados estatico
+        Database.instance.userDB.append(unwrapUser)
+        
+        // Mostra o Status da conta
         newUserView.showAccountStatus(loggedUser: unwrapUser)
+    
+        let loggedMenuController = LoggedUserMenuController()
+        
+        // inicia o controller do usuario logado
+        loggedMenuController.startLoggedUserMenu(loggedUser: unwrapUser)
+      
+       
+        
+        
     }
     
     

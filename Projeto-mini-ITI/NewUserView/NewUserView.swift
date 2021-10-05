@@ -10,11 +10,13 @@ import Foundation
 struct NewUserView {
    
     func showAccountStatus(loggedUser: UserModel){
+        
+        guard let agency = loggedUser.account.agency,let account = loggedUser.account.accountNumber else { return }
         print("""
 
 Bem vindo: \(loggedUser.name)
-Agencia:   \(loggedUser.account.agency)
-Conta:     \(loggedUser.account.accountNumber)
+Agencia:   \(agency)
+Conta:     \(account)
 
     Saldo: \(loggedUser.account.balance)
 """)
@@ -36,12 +38,13 @@ Conta:     \(loggedUser.account.accountNumber)
     }
 
 func errorName(){
-    print("Nome inválido, digite novamente.. \n")
+    print("\n Nome inválido, digite novamente.. ")
 }
 func errorDocument(){
-    print("CPF inválido, digite novamente.. \n")
+    print("\n CPF inválido, digite novamente.. \n")
 }
-
+    func errorDocumentAlreadyExists(){
+    print("\n Esse CPF já se encontra cadastrado.. \n")
 }
 
 
@@ -139,3 +142,4 @@ func errorDocument(){
 
 
 
+}

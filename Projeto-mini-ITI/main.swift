@@ -6,42 +6,50 @@
 //
 
 import Foundation
-
-var usersDB = [User]()
-private var loggedUser : User?
+ 
 
 
-
-print("""
-Bem vindo ao novo aplicativo do ITI
-Digite a opção desejada
-
-1 - ▶️ Entrar
-2 - 👤 Novo Cadastro
-3 - 🔚 Sair do App
-Sua escolha:
-""")
-
-private let selection = Int(readLine() ?? "-1") ?? -1
+let homeVC = HomeViewController()
+homeVC.startMainMenu()
 
 
-var menu  = MainMenuOptions(rawValue: selection)
 
 
-while true {
-switch menu {
-case .ENTRAR:
-print("Entrar")
-    
-case .NOVO_CADASTRO:
-  loggedUser =  NewUser.registration()
-    SystemAcess.acessingSystem()
-    
-    
-case .SAIR:
-    print("SAIR")
-    
-case .none:
-    print("opçao invalida")
-}
-}
+
+
+
+//
+//print("""
+//Bem vindo ao novo aplicativo do ITI
+//Digite a opção desejada
+//
+//1 - ▶️ Entrar
+//2 - 👤 Novo Cadastro
+//3 - 🔚 Sair do App
+//Sua escolha:
+//""")
+//
+//private let selection = Int(readLine() ?? "-1") ?? -1
+//
+//var menu  = MainMenuOptionsENUM(rawValue: selection)
+//
+//while true {
+//
+//switch menu {
+//
+//case .ENTRAR:
+//print("Entrar")
+//
+//case .NOVO_CADASTRO:
+//  loggedUser =  RegisterView.registration()
+//
+//  SystemAcess.acessingSystem(loggedUser: loggedUser!)
+//
+//
+//case .SAIR:
+//    print("SAIR")
+//
+//case .none:
+//    print("opçao invalida")
+//}
+//}

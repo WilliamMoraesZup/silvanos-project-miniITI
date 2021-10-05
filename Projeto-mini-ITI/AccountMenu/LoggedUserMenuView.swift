@@ -8,11 +8,10 @@
 import Foundation
 
 
-struct LoggedUserMenuControllerView.swift {
+struct LoggedUserMenuView {
     
     func showOptions() -> Int? {
         print("""
-
 💰 DEPOSITOS / PAGAMENTOS
 
 1 - Transferir Agencia / Conta
@@ -22,6 +21,7 @@ struct LoggedUserMenuControllerView.swift {
 5 - Saldo
 6 - Excluir Conta
 7 - Sair
+
 Sua escolha:
 """)
         
@@ -29,7 +29,7 @@ Sua escolha:
         return selection
     }
     
-    func inputPix() -> Int? {
+    func inputPixType() -> Int? {
         print("""
 Escolha o tipo de Chave Pix
 1- CPF
@@ -37,19 +37,95 @@ Escolha o tipo de Chave Pix
 3- Celular
 4- Chave Aleatória
 
-Escolha sua chave..
+""")
+        
+        let selection = Int(readLine() ?? String())
+        return selection
+        
+    }
+    
+    func inputPixValue() -> String? {
+        print("""
+Digite a sua chave..
+
 """)
         
         
-        let selection = Int(readLine() ?? String())
+        return readLine() ?? String()
         
-        return selection
+    }
+    func newPixSucessMsg() {
+        print("""
+        
+        Chave pix cadastrada com sucesso
+        """)
+    }
+    func  warningAbsencePix(){
+        print("""
+            
+            Parece que você ainda não cadastrou nenhuma chave pix.
+            Cadastre uma agora.
+            
+            """)
     }
     
-    func registerNewPixKeyView(){
-        print("Selecione o tipo da chave")
-        let keyType = Int(readLine() ?? String())
+    func inputDepositValue() -> Int? {
+        print("""
+            
+            Valor a ser depositado na conta..
+            * Valor em REAIS
+            """)
         
+        return Int(readLine() ?? String())
+    }
+    
+    func showDepositSucess(){
+        print("""
+            
+            Deposito realizado com sucesso!
+            
+            """)
         
     }
+    func showBalance(value : String){
+        print("""
+            
+            Seu saldo:   R$ \(value) reais.
+            
+            """)
+        
+    }
+    func showPixRegisterSucess( ){
+        
+        print("""
+            
+            Chave Pix Cadastrada com sucesso!
+            
+            """)
+        
+    }
+    
+    func inputAgToTransfer()  -> Int? {
+        print("""
+            Digite a Agencia de destino..
+            """)
+        
+        return Int(readLine() ?? String())
+    }
+    
+    func inputAccToTransfer() -> Int? {
+        print("""
+            Digite a Conta de destino..
+            """)
+        return Int(readLine() ?? String())
+    }
+    
+    func inputAmmountToTransfer() -> Int? {
+        print("""
+            Digite a quantia a ser transferida..
+            """)
+        
+        return Int(readLine() ?? String())
+    }
 }
+

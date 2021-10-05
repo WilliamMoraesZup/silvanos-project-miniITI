@@ -7,19 +7,20 @@
 
 import Foundation
 
-class Account {
-    var agency : Int {
-        agencyGenerator()
-    }
-    var accountNumber : Int {
-        Int.random(in: 10000..<20000)
+struct Account {
+    var agency : Int?
+    var accountNumber : Int? 
+    var balance   = 0
+ 
+    
+    init() {
+        self.agency = agencyGenerator()
+        self.accountNumber =    Int.random(in: 10000..<20000)
     }
     
-    let balance   = 0.0
- 
     private  func agencyGenerator() -> Int {
         let agencies = [1234, 3234, 4422, 4443]
-        
+         
         return  agencies[Int(arc4random_uniform(UInt32(agencies.count)))]
         
         // Aqui eu primeiro criei um ENUM para manter o registro das agencias
@@ -30,5 +31,9 @@ class Account {
     }
 }
 
+enum Agency {
+    case VILA_NOVA
+    case _1122
+}
 
 
