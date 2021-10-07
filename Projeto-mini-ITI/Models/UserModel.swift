@@ -10,18 +10,28 @@ import Foundation
 class UserModel {
     
     let name : String
-    let documentNumber : String
+    let documentNumber : Int
+    let password : Int
     var pix = [Pix]()
     var account = Account()
     
     
-    
-    init(name: String, documentNumber: String, account: Account){
+
+    init(name: String, documentNumber: Int, password : Int, account: Account){
         self.name = name
         self.documentNumber = documentNumber
+        self.password = password
         self.account = account
-        
+
     }
+
+//    init(name: String, documentNumber: String,   account: Account){
+//        self.name = name
+//        self.documentNumber = documentNumber
+//
+//        self.account = account
+//
+//    }
     
     func addNewPixKey(pixKey : Pix){
         self.pix.append(pixKey)

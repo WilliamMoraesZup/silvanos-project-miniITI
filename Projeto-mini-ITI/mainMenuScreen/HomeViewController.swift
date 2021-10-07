@@ -10,8 +10,6 @@ import Foundation
 struct HomeViewController {
     
     func startMainMenu(){
-        
-        
         /**
          a funçao faz um loop e a cada passagem do loop ele chama o menu principal.
          o loop chama o menu principal
@@ -20,9 +18,7 @@ struct HomeViewController {
          
          se nao for nulo ele chama a funcao selectedHandler, passando a variavel como argumento.
          esse funçao por sua vez vai chamar um Case para direcionar a opçao desejada para o controller especifico.
-         
-         
-         */
+        */
         
         let homeView = HomeView()
         
@@ -50,8 +46,15 @@ struct HomeViewController {
     func selectedHandler(option : Int) -> Bool? {
         
         switch option {
+        
         case 1:
-            print("chamar view de login")
+            if let validUser = LoginController().login() {
+                NewUserView().showAccountStatus(loggedUser: validUser)
+                LoggedUserMenuController().startLoggedUserMenu(loggedUser: validUser)
+            }
+            else {
+                print("USUARIO INVALIDO, SELECT HANDLER")
+            }
             
         case 2:
             NewUserController().startForm()
@@ -59,10 +62,7 @@ struct HomeViewController {
         case 3:
             print("SAIR")
         
-        case 4:
-        
-            Database.instance.userDB.forEach{ print ($0.account )}
-            
+       
             
         default:
             print("""
@@ -72,10 +72,9 @@ chamar view de opçao incorreta
         }
         return true
     }
+     
+       
     
-    func enterAccount(){
-        
-    }
     
     func newUser(){}
     

@@ -19,6 +19,13 @@
 		90225F152708BD7D003E9E9B /* LoggedUserMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90225F142708BD7D003E9E9B /* LoggedUserMenuView.swift */; };
 		90678656270A2FBE000A3CAA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90678655270A2FBE000A3CAA /* Database.swift */; };
 		90678658270A3469000A3CAA /* LoggedUserMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90678657270A3469000A3CAA /* LoggedUserMenuController.swift */; };
+		90C020A1270DD86200941115 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A0270DD86200941115 /* LoginView.swift */; };
+		90C020A3270DD86F00941115 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A2270DD86F00941115 /* LoginController.swift */; };
+		90C020A6270E811100941115 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A5270E811100941115 /* Deposit.swift */; };
+		90C020A8270E81D600941115 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A7270E81D600941115 /* Balance.swift */; };
+		90C020AA270E824300941115 /* TransferAgAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A9270E824300941115 /* TransferAgAcc.swift */; };
+		90C020AC270E85DC00941115 /* PaymentByPix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020AB270E85DC00941115 /* PaymentByPix.swift */; };
+		90C020AE270E864900941115 /* NewPixKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020AD270E864900941115 /* NewPixKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +54,13 @@
 		90225F142708BD7D003E9E9B /* LoggedUserMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUserMenuView.swift; sourceTree = "<group>"; };
 		90678655270A2FBE000A3CAA /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		90678657270A3469000A3CAA /* LoggedUserMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUserMenuController.swift; sourceTree = "<group>"; };
+		90C020A0270DD86200941115 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		90C020A2270DD86F00941115 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		90C020A5270E811100941115 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
+		90C020A7270E81D600941115 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		90C020A9270E824300941115 /* TransferAgAcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAgAcc.swift; sourceTree = "<group>"; };
+		90C020AB270E85DC00941115 /* PaymentByPix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentByPix.swift; sourceTree = "<group>"; };
+		90C020AD270E864900941115 /* NewPixKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPixKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +93,11 @@
 		900EFED2270600F0006FB291 /* Projeto-mini-ITI */ = {
 			isa = PBXGroup;
 			children = (
+				90C0209F270DD84600941115 /* loginScreen */,
 				90678653270A2FA9000A3CAA /* DB */,
-				90225F132708BD67003E9E9B /* AccountMenu */,
-				900EFEEB27079EDA006FB291 /* NewUserView */,
-				900EFEE8270793AF006FB291 /* HomeView */,
+				90225F132708BD67003E9E9B /* loggedAccountScreen */,
+				900EFEEB27079EDA006FB291 /* newAccountScreen */,
+				900EFEE8270793AF006FB291 /* mainMenuScreen */,
 				900EFEE727075CC9006FB291 /* Models */,
 				900EFEE62707583A006FB291 /* MainMenuOptions */,
 				900EFED3270600F0006FB291 /* main.swift */,
@@ -108,31 +123,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		900EFEE8270793AF006FB291 /* HomeView */ = {
+		900EFEE8270793AF006FB291 /* mainMenuScreen */ = {
 			isa = PBXGroup;
 			children = (
 				900EFEE9270793BD006FB291 /* HomeView.swift */,
 				900EFEEC2707D9FD006FB291 /* HomeViewController.swift */,
 			);
-			path = HomeView;
+			path = mainMenuScreen;
 			sourceTree = "<group>";
 		};
-		900EFEEB27079EDA006FB291 /* NewUserView */ = {
+		900EFEEB27079EDA006FB291 /* newAccountScreen */ = {
 			isa = PBXGroup;
 			children = (
 				900EFEDC27062A3C006FB291 /* NewUserController.swift */,
 				900EFEEE2707DC2C006FB291 /* NewUserView.swift */,
 			);
-			path = NewUserView;
+			path = newAccountScreen;
 			sourceTree = "<group>";
 		};
-		90225F132708BD67003E9E9B /* AccountMenu */ = {
+		90225F132708BD67003E9E9B /* loggedAccountScreen */ = {
 			isa = PBXGroup;
 			children = (
+				90C020A4270E80E700941115 /* scenes */,
 				90225F142708BD7D003E9E9B /* LoggedUserMenuView.swift */,
 				90678657270A3469000A3CAA /* LoggedUserMenuController.swift */,
 			);
-			path = AccountMenu;
+			path = loggedAccountScreen;
 			sourceTree = "<group>";
 		};
 		90678653270A2FA9000A3CAA /* DB */ = {
@@ -141,6 +157,27 @@
 				90678655270A2FBE000A3CAA /* Database.swift */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		90C0209F270DD84600941115 /* loginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				90C020A0270DD86200941115 /* LoginView.swift */,
+				90C020A2270DD86F00941115 /* LoginController.swift */,
+			);
+			name = loginScreen;
+			sourceTree = "<group>";
+		};
+		90C020A4270E80E700941115 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				90C020A5270E811100941115 /* Deposit.swift */,
+				90C020A7270E81D600941115 /* Balance.swift */,
+				90C020A9270E824300941115 /* TransferAgAcc.swift */,
+				90C020AD270E864900941115 /* NewPixKey.swift */,
+				90C020AB270E85DC00941115 /* PaymentByPix.swift */,
+			);
+			path = scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +247,15 @@
 				900EFED4270600F0006FB291 /* main.swift in Sources */,
 				900EFEEF2707DC2C006FB291 /* NewUserView.swift in Sources */,
 				90678658270A3469000A3CAA /* LoggedUserMenuController.swift in Sources */,
+				90C020AE270E864900941115 /* NewPixKey.swift in Sources */,
+				90C020A1270DD86200941115 /* LoginView.swift in Sources */,
 				90225F102708AA6C003E9E9B /* UserForm.swift in Sources */,
+				90C020A6270E811100941115 /* Deposit.swift in Sources */,
+				90C020AA270E824300941115 /* TransferAgAcc.swift in Sources */,
 				90225F122708AAA6003E9E9B /* UserModel.swift in Sources */,
+				90C020A8270E81D600941115 /* Balance.swift in Sources */,
+				90C020AC270E85DC00941115 /* PaymentByPix.swift in Sources */,
+				90C020A3270DD86F00941115 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

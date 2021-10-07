@@ -25,5 +25,12 @@ struct HomeView {
             
     return selection
 }
+    
+    func showInvalidOption(){
+        print("""
+    Opção inválida, digite novamente
+    """)
+        
+    }
 
 }

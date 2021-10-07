@@ -87,6 +87,15 @@ Digite a sua chave..
             """)
         
     }
+    
+    func showPixTransferSucess(){
+        print("""
+            
+            Transferencia pix realizada com sucesso!
+            
+            """)
+    }
+    
     func showBalance(value : String){
         print("""
             
@@ -127,5 +136,22 @@ Digite a sua chave..
         
         return Int(readLine() ?? String())
     }
+    
+    func inputPixKeyToTransfer() -> String? {
+        print("""
+            Digite o pix da conta de destino..
+            """)
+        
+        return readLine() ?? String()
+    }
+    func inputAmmountToTransferByPix() -> Int? {
+        print("""
+            Digite a quantia a ser transferida..
+            """)
+        
+        return Int(readLine() ?? String())
+    }
+    
+    
 }
 

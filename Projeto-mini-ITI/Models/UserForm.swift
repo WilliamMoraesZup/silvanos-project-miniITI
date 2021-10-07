@@ -10,15 +10,16 @@ import Foundation
 
 struct UserForm {
     let name : String?
-    let documentNumber : String?
-    
+    let documentNumber : Int?
+    let password : Int?
     
     
     func toModel() -> UserModel? {
         
         let newACC = Account()
+        // TO-DO  remover os force unwrap
         
-        return UserModel(name: name!, documentNumber : documentNumber!, account: newACC)
+        return UserModel(name: name!, documentNumber : documentNumber!, password : password! , account: newACC )
      
         
     }

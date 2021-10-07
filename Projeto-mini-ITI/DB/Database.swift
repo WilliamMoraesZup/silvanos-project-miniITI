@@ -18,7 +18,7 @@ struct Database {
     }
     
     // verifica se o CPF ja existe no array de usuarios
-    func documentAlreadyExists(value : String) -> Bool {
+    func documentAlreadyExists(value : Int) -> Bool {
         return userDB.contains(where: { $0.documentNumber == value })
     }
     
@@ -52,7 +52,7 @@ struct Database {
         
         if !loggedUser.debitValue(value: ammount){
             print("Você nao possui saldo para essa transferencia")
-           return false
+            return false
         }
         
         userFound?.creditValue(value: ammount)
@@ -60,8 +60,35 @@ struct Database {
         return true
     }
     
+    func validatePixTransfer(value: String, ammount: Int, from: UserModel) -> Bool {
+        let found = userDB.first(where: { $0.pix.contains(where: { $0.value == value}) })
+        
+        if   from.debitValue(value: ammount){
+            found?.creditValue(value: ammount)
+        }
+        return true
+    }
+    
+    func pixKeyExists(value : String) -> Bool {
+        return   userDB.flatMap({$0.pix}).contains(where: {$0.value == value})
+    }
+    
+    
+    
+    func validateLogin(userDocument : Int, pass: Int) -> UserModel? {
+        
+        print(userDocument)
+print(pass)
+        let userFound = userDB.first {
+            $0.documentNumber == userDocument && $0.password == pass }
+        
+        print(userFound)
+         return userFound
+    }
+    
     
     
 }
+
 
 

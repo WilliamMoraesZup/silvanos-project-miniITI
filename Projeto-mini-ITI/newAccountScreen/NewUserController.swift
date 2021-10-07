@@ -14,7 +14,8 @@ struct NewUserController{
         let newUserView = NewUserView()
       
         var validName : String?
-        var validDocument : String?
+        var validDocument : Int?
+        var validPassword : Int?
         
         while true {
             if let name = newUserView.inputName(), name.count > 2 {
@@ -47,8 +48,22 @@ struct NewUserController{
             continue
            }
         }
+        while true {
+            if let pass = newUserView.inputPassword()//
+               , String(pass).count > 5
+            {
+                validPassword = pass
+                break
+                
+            }
+           else {
+            newUserView.errorPassword()
+            
+            continue
+           }
+        }
         
-        let newUser = UserForm(name: validName, documentNumber: validDocument).toModel()
+        let newUser = UserForm(name: validName, documentNumber: validDocument, password : validPassword).toModel()
         
         guard let unwrapUser = newUser else {
           return  print("TO-DO error, show system error")
