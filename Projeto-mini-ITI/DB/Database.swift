@@ -77,12 +77,11 @@ struct Database {
     
     func validateLogin(userDocument : Int, pass: Int) -> UserModel? {
         
-        print(userDocument)
-print(pass)
+         
         let userFound = userDB.first {
             $0.documentNumber == userDocument && $0.password == pass }
         
-        print(userFound)
+        
          return userFound
     }
     

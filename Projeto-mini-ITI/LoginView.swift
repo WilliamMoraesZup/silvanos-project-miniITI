@@ -26,9 +26,19 @@ struct LoginView {
         return Int(readLine() ?? String())
     }
     
-         
+    
+    func userNotFound(){
+        print("\nUsuário não encontrado.. \n")
+    }
     
     
+    func errorInvalidLogin(){
+        print("\nLogin Invalido, o cpf deve conter apenas numeros.. \n")
+    }
+    
+    func errorInvalidPass(){
+        print("\nPassword Invalido, a senha deve conter apenas números.. \n")
+    }
     
     
 }

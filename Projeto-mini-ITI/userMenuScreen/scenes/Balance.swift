@@ -11,7 +11,7 @@ struct Balance {
     
     func balance(loggedUser : UserModel){
         let balance = String(loggedUser.account.balance)
-        LoggedUserMenuView().showBalance(value: balance )
+        UserMenuView().showBalance(value: balance )
         
     }
 }

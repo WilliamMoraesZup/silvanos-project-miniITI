@@ -13,7 +13,7 @@ struct PaymentByPix {
  
     func dontHavePixYet(loggedUser : UserModel) -> Bool     {
         if loggedUser.pix.count == 0 {
-            LoggedUserMenuView().warningAbsencePix()
+            UserMenuView().warningAbsencePix()
             // Nao possui pix ainda
             return true
         }
@@ -64,7 +64,7 @@ struct PaymentByPix {
             }
            
 func executeTransferByPix(loggedUser : UserModel)  {
-    let view = LoggedUserMenuView()
+    let view = UserMenuView()
     guard let pixToTransfer = view.inputPixKeyToTransfer() else {  return print("erro no key")    }
     
     guard let ammount = view.inputAmmountToTransferByPix() else {  return print("erro no ammout")    }

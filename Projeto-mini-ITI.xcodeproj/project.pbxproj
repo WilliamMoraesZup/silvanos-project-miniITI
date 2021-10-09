@@ -9,16 +9,18 @@
 /* Begin PBXBuildFile section */
 		900EFED4270600F0006FB291 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFED3270600F0006FB291 /* main.swift */; };
 		900EFEDD27062A3C006FB291 /* NewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEDC27062A3C006FB291 /* NewUserController.swift */; };
-		900EFEDF27062A4B006FB291 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEDE27062A4B006FB291 /* User.swift */; };
 		900EFEE12706339F006FB291 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEE02706339F006FB291 /* Account.swift */; };
 		900EFEEA270793BD006FB291 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEE9270793BD006FB291 /* HomeView.swift */; };
 		900EFEED2707D9FD006FB291 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEEC2707D9FD006FB291 /* HomeViewController.swift */; };
 		900EFEEF2707DC2C006FB291 /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEEE2707DC2C006FB291 /* NewUserView.swift */; };
 		90225F102708AA6C003E9E9B /* UserForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90225F0F2708AA6C003E9E9B /* UserForm.swift */; };
 		90225F122708AAA6003E9E9B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90225F112708AAA6003E9E9B /* UserModel.swift */; };
-		90225F152708BD7D003E9E9B /* LoggedUserMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90225F142708BD7D003E9E9B /* LoggedUserMenuView.swift */; };
+		90225F152708BD7D003E9E9B /* UserMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90225F142708BD7D003E9E9B /* UserMenuView.swift */; };
+		902747CA271085C9001052E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902747C9271085C9001052E0 /* Extensions.swift */; };
+		902CAB4D2711D9990057083F /* AccountExhibition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902CAB4C2711D9990057083F /* AccountExhibition.swift */; };
+		904464242710D0E70055B757 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904464232710D0E70055B757 /* Api.swift */; };
 		90678656270A2FBE000A3CAA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90678655270A2FBE000A3CAA /* Database.swift */; };
-		90678658270A3469000A3CAA /* LoggedUserMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90678657270A3469000A3CAA /* LoggedUserMenuController.swift */; };
+		90678658270A3469000A3CAA /* UserMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90678657270A3469000A3CAA /* UserMenuController.swift */; };
 		90C020A1270DD86200941115 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A0270DD86200941115 /* LoginView.swift */; };
 		90C020A3270DD86F00941115 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A2270DD86F00941115 /* LoginController.swift */; };
 		90C020A6270E811100941115 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A5270E811100941115 /* Deposit.swift */; };
@@ -44,16 +46,18 @@
 		900EFED0270600F0006FB291 /* Projeto-mini-ITI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Projeto-mini-ITI"; sourceTree = BUILT_PRODUCTS_DIR; };
 		900EFED3270600F0006FB291 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		900EFEDC27062A3C006FB291 /* NewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserController.swift; sourceTree = "<group>"; };
-		900EFEDE27062A4B006FB291 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		900EFEE02706339F006FB291 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		900EFEE9270793BD006FB291 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		900EFEEC2707D9FD006FB291 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		900EFEEE2707DC2C006FB291 /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
 		90225F0F2708AA6C003E9E9B /* UserForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForm.swift; sourceTree = "<group>"; };
 		90225F112708AAA6003E9E9B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		90225F142708BD7D003E9E9B /* LoggedUserMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUserMenuView.swift; sourceTree = "<group>"; };
+		90225F142708BD7D003E9E9B /* UserMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuView.swift; sourceTree = "<group>"; };
+		902747C9271085C9001052E0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		902CAB4C2711D9990057083F /* AccountExhibition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountExhibition.swift; sourceTree = "<group>"; };
+		904464232710D0E70055B757 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		90678655270A2FBE000A3CAA /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		90678657270A3469000A3CAA /* LoggedUserMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUserMenuController.swift; sourceTree = "<group>"; };
+		90678657270A3469000A3CAA /* UserMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuController.swift; sourceTree = "<group>"; };
 		90C020A0270DD86200941115 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		90C020A2270DD86F00941115 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		90C020A5270E811100941115 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
@@ -93,12 +97,13 @@
 		900EFED2270600F0006FB291 /* Projeto-mini-ITI */ = {
 			isa = PBXGroup;
 			children = (
+				902747C8271085BA001052E0 /* shared */,
 				90C0209F270DD84600941115 /* loginScreen */,
 				90678653270A2FA9000A3CAA /* DB */,
-				90225F132708BD67003E9E9B /* loggedAccountScreen */,
-				900EFEEB27079EDA006FB291 /* newAccountScreen */,
+				90225F132708BD67003E9E9B /* userMenuScreen */,
+				900EFEEB27079EDA006FB291 /* newUser */,
 				900EFEE8270793AF006FB291 /* mainMenuScreen */,
-				900EFEE727075CC9006FB291 /* Models */,
+				900EFEE727075CC9006FB291 /* models */,
 				900EFEE62707583A006FB291 /* MainMenuOptions */,
 				900EFED3270600F0006FB291 /* main.swift */,
 			);
@@ -112,15 +117,15 @@
 			path = MainMenuOptions;
 			sourceTree = "<group>";
 		};
-		900EFEE727075CC9006FB291 /* Models */ = {
+		900EFEE727075CC9006FB291 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				900EFEE02706339F006FB291 /* Account.swift */,
 				90225F0F2708AA6C003E9E9B /* UserForm.swift */,
 				90225F112708AAA6003E9E9B /* UserModel.swift */,
-				900EFEDE27062A4B006FB291 /* User.swift */,
+				902CAB4C2711D9990057083F /* AccountExhibition.swift */,
 			);
-			path = Models;
+			path = models;
 			sourceTree = "<group>";
 		};
 		900EFEE8270793AF006FB291 /* mainMenuScreen */ = {
@@ -128,27 +133,36 @@
 			children = (
 				900EFEE9270793BD006FB291 /* HomeView.swift */,
 				900EFEEC2707D9FD006FB291 /* HomeViewController.swift */,
+				904464232710D0E70055B757 /* Api.swift */,
 			);
 			path = mainMenuScreen;
 			sourceTree = "<group>";
 		};
-		900EFEEB27079EDA006FB291 /* newAccountScreen */ = {
+		900EFEEB27079EDA006FB291 /* newUser */ = {
 			isa = PBXGroup;
 			children = (
 				900EFEDC27062A3C006FB291 /* NewUserController.swift */,
 				900EFEEE2707DC2C006FB291 /* NewUserView.swift */,
 			);
-			path = newAccountScreen;
+			path = newUser;
 			sourceTree = "<group>";
 		};
-		90225F132708BD67003E9E9B /* loggedAccountScreen */ = {
+		90225F132708BD67003E9E9B /* userMenuScreen */ = {
 			isa = PBXGroup;
 			children = (
 				90C020A4270E80E700941115 /* scenes */,
-				90225F142708BD7D003E9E9B /* LoggedUserMenuView.swift */,
-				90678657270A3469000A3CAA /* LoggedUserMenuController.swift */,
+				90225F142708BD7D003E9E9B /* UserMenuView.swift */,
+				90678657270A3469000A3CAA /* UserMenuController.swift */,
 			);
-			path = loggedAccountScreen;
+			path = userMenuScreen;
+			sourceTree = "<group>";
+		};
+		902747C8271085BA001052E0 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				902747C9271085C9001052E0 /* Extensions.swift */,
+			);
+			path = shared;
 			sourceTree = "<group>";
 		};
 		90678653270A2FA9000A3CAA /* DB */ = {
@@ -238,20 +252,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				900EFEE12706339F006FB291 /* Account.swift in Sources */,
-				90225F152708BD7D003E9E9B /* LoggedUserMenuView.swift in Sources */,
+				90225F152708BD7D003E9E9B /* UserMenuView.swift in Sources */,
 				90678656270A2FBE000A3CAA /* Database.swift in Sources */,
-				900EFEDF27062A4B006FB291 /* User.swift in Sources */,
 				900EFEEA270793BD006FB291 /* HomeView.swift in Sources */,
 				900EFEDD27062A3C006FB291 /* NewUserController.swift in Sources */,
 				900EFEED2707D9FD006FB291 /* HomeViewController.swift in Sources */,
 				900EFED4270600F0006FB291 /* main.swift in Sources */,
+				904464242710D0E70055B757 /* Api.swift in Sources */,
 				900EFEEF2707DC2C006FB291 /* NewUserView.swift in Sources */,
-				90678658270A3469000A3CAA /* LoggedUserMenuController.swift in Sources */,
+				90678658270A3469000A3CAA /* UserMenuController.swift in Sources */,
 				90C020AE270E864900941115 /* NewPixKey.swift in Sources */,
+				902CAB4D2711D9990057083F /* AccountExhibition.swift in Sources */,
 				90C020A1270DD86200941115 /* LoginView.swift in Sources */,
 				90225F102708AA6C003E9E9B /* UserForm.swift in Sources */,
 				90C020A6270E811100941115 /* Deposit.swift in Sources */,
 				90C020AA270E824300941115 /* TransferAgAcc.swift in Sources */,
+				902747CA271085C9001052E0 /* Extensions.swift in Sources */,
 				90225F122708AAA6003E9E9B /* UserModel.swift in Sources */,
 				90C020A8270E81D600941115 /* Balance.swift in Sources */,
 				90C020AC270E85DC00941115 /* PaymentByPix.swift in Sources */,

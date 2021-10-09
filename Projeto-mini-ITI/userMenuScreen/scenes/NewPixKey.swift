@@ -10,7 +10,7 @@ import Foundation
 struct NewPixKey{
     
     func registerNewPixKey(loggedUser : UserModel) -> (result: Bool, pixValue: String?) {
-        let view = LoggedUserMenuView()
+        let view = UserMenuView()
         
         guard let unwrapPixOption = view.inputPixType() else {
             return (false, nil)

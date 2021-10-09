@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct LoggedUserMenuView {
+struct UserMenuView {
     
     func showOptions() -> Int? {
         print("""
@@ -49,8 +49,7 @@ Escolha o tipo de Chave Pix
 Digite a sua chave..
 
 """)
-        
-        
+         
         return readLine() ?? String()
         
     }
@@ -74,6 +73,7 @@ Digite a sua chave..
             
             Valor a ser depositado na conta..
             * Valor em REAIS
+            
             """)
         
         return Int(readLine() ?? String())
@@ -116,6 +116,7 @@ Digite a sua chave..
     
     func inputAgToTransfer()  -> Int? {
         print("""
+            
             Digite a Agencia de destino..
             """)
         
@@ -124,6 +125,7 @@ Digite a sua chave..
     
     func inputAccToTransfer() -> Int? {
         print("""
+            
             Digite a Conta de destino..
             """)
         return Int(readLine() ?? String())
@@ -152,6 +154,44 @@ Digite a sua chave..
         return Int(readLine() ?? String())
     }
     
+    func invalidAgency(){
+        print("""
+            Agencia inválida, digite somente números..
+            
+            """)
+    }
+    func invalidAcc(){
+        print("""
+            Conta inválida, digite somente números..
+            
+            """)
+    }
     
+    func accountNotFound(){
+        print("""
+            Conta não encontrada..
+            
+            """)
+    }
+    
+    func invalidAmmount(){
+        print("""
+            Quantidade inválida..
+            
+            """)
+    }
+    
+    func sucessTransfer(){
+        print("""
+            Transferencia realizada com sucesso..
+            """)
+    }
+    
+    func errorTransfer(){
+        print("""
+            Houve um problema com a transferencia, tente novamente..
+            
+            """)
+    }
 }
 

@@ -11,7 +11,7 @@ struct Deposit {
     
     
 func deposit(loggedUser : UserModel) {
-    let view = LoggedUserMenuView()
+    let view = UserMenuView()
     
     if let deposit = view.inputDepositValue(), deposit > 0 {
         loggedUser.creditValue(value: deposit)
@@ -19,7 +19,7 @@ func deposit(loggedUser : UserModel) {
         
         let balance = String(loggedUser.account.balance)
         
-        LoggedUserMenuView().showBalance(value: balance )
+        UserMenuView().showBalance(value: balance )
         
     }
     else { print("valor invalido")  }

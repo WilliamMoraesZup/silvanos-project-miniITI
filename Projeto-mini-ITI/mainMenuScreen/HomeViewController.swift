@@ -8,6 +8,9 @@
 import Foundation
 
 struct HomeViewController {
+ 
+    
+   
     
     func startMainMenu(){
         /**
@@ -19,6 +22,7 @@ struct HomeViewController {
          se nao for nulo ele chama a funcao selectedHandler, passando a variavel como argumento.
          esse funçao por sua vez vai chamar um Case para direcionar a opçao desejada para o controller especifico.
         */
+         
         
         let homeView = HomeView()
         
@@ -35,7 +39,7 @@ struct HomeViewController {
                     break
                 }
             }
-            
+            HomeView().showInvalidOption()
             continue
         }
         
@@ -48,13 +52,8 @@ struct HomeViewController {
         switch option {
         
         case 1:
-            if let validUser = LoginController().login() {
-                NewUserView().showAccountStatus(loggedUser: validUser)
-                LoggedUserMenuController().startLoggedUserMenu(loggedUser: validUser)
-            }
-            else {
-                print("USUARIO INVALIDO, SELECT HANDLER")
-            }
+          LoginController().login()
+          self.startMainMenu()
             
         case 2:
             NewUserController().startForm()
@@ -62,22 +61,16 @@ struct HomeViewController {
         case 3:
             print("SAIR")
         
-       
-            
         default:
-            print("""
-chamar view de opçao incorreta
-""")
+            HomeView().showInvalidOption()
             return false
         }
+        
+        print("erro")
         return true
     }
      
        
-    
-    
-    func newUser(){}
-    
-    func exit(){}
+     
     
 }

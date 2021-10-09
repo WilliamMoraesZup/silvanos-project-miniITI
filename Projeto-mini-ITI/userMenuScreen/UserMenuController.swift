@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct LoggedUserMenuController {
+struct UserMenuController {
     
     
     
-    func startLoggedUserMenu(loggedUser : UserModel){
+    func startUserMenu(loggedUser : UserModel){
         
-        let loggedUserView = LoggedUserMenuView()
+        let loggedUserView = UserMenuView()
         
         let selected = loggedUserView.showOptions()
         
@@ -34,20 +34,20 @@ struct LoggedUserMenuController {
             
         case 2: //Pagar ou Transferir com Pix
             PaymentByPix().paymentPix(loggedUser: loggedUser)
-            self.startLoggedUserMenu(loggedUser: loggedUser)
+            self.startUserMenu(loggedUser: loggedUser)
             
         case 3:  // Cadatrar nova Chave Pix
            NewPixKey().registerNewPixKey(loggedUser: loggedUser)
-            self.startLoggedUserMenu(loggedUser: loggedUser)
+            self.startUserMenu(loggedUser: loggedUser)
             
         case 4: // Depositar
             Deposit().deposit(loggedUser: loggedUser)
-            self.startLoggedUserMenu(loggedUser: loggedUser)
+            self.startUserMenu(loggedUser: loggedUser)
             
             
         case 5: // Saldo
             Balance().balance(loggedUser: loggedUser)
-            self.startLoggedUserMenu(loggedUser: loggedUser)
+            self.startUserMenu(loggedUser: loggedUser)
             
             
         case 6: // Excluir Conta
@@ -62,9 +62,8 @@ struct LoggedUserMenuController {
         default:
             print("invalido")
             
-        }
-        print("Deveria cair aqui? vai chamar o startloggedUsermen ")
-        self.startLoggedUserMenu(loggedUser: loggedUser)
+        } 
+        self.startUserMenu(loggedUser: loggedUser)
     }
      
     
