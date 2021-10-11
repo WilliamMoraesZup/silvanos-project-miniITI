@@ -44,7 +44,7 @@ struct NewPixKey{
             }
             
             //chama a funcao para conferir se a chave já existe
-            if (Database.instance.pixKeyAlreadyExists(value: unwrapPixValue)){
+            if (DbQueries().existsByPixKey(value: unwrapPixValue)){
                 print("Essa chave já se encontra cadastrad")
                 
                 // FIXME: essa parte esta ambigua

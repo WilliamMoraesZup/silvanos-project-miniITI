@@ -28,6 +28,7 @@
 		90C020AA270E824300941115 /* TransferAgAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020A9270E824300941115 /* TransferAgAcc.swift */; };
 		90C020AC270E85DC00941115 /* PaymentByPix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020AB270E85DC00941115 /* PaymentByPix.swift */; };
 		90C020AE270E864900941115 /* NewPixKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020AD270E864900941115 /* NewPixKey.swift */; };
+		90FCD4EC27149C6D00E621C3 /* DbQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FCD4EB27149C6D00E621C3 /* DbQueries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +66,7 @@
 		90C020A9270E824300941115 /* TransferAgAcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAgAcc.swift; sourceTree = "<group>"; };
 		90C020AB270E85DC00941115 /* PaymentByPix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentByPix.swift; sourceTree = "<group>"; };
 		90C020AD270E864900941115 /* NewPixKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPixKey.swift; sourceTree = "<group>"; };
+		90FCD4EB27149C6D00E621C3 /* DbQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbQueries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		900EFED2270600F0006FB291 /* Projeto-mini-ITI */ = {
 			isa = PBXGroup;
 			children = (
+				90FCD4EA2711F72900E621C3 /* externalApiExample */,
 				902747C8271085BA001052E0 /* shared */,
 				90C0209F270DD84600941115 /* loginScreen */,
 				90678653270A2FA9000A3CAA /* DB */,
@@ -133,7 +136,6 @@
 			children = (
 				900EFEE9270793BD006FB291 /* HomeView.swift */,
 				900EFEEC2707D9FD006FB291 /* HomeViewController.swift */,
-				904464232710D0E70055B757 /* Api.swift */,
 			);
 			path = mainMenuScreen;
 			sourceTree = "<group>";
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				90678655270A2FBE000A3CAA /* Database.swift */,
+				90FCD4EB27149C6D00E621C3 /* DbQueries.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -192,6 +195,14 @@
 				90C020AB270E85DC00941115 /* PaymentByPix.swift */,
 			);
 			path = scenes;
+			sourceTree = "<group>";
+		};
+		90FCD4EA2711F72900E621C3 /* externalApiExample */ = {
+			isa = PBXGroup;
+			children = (
+				904464232710D0E70055B757 /* Api.swift */,
+			);
+			path = externalApiExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 				90C020AE270E864900941115 /* NewPixKey.swift in Sources */,
 				902CAB4D2711D9990057083F /* AccountExhibition.swift in Sources */,
 				90C020A1270DD86200941115 /* LoginView.swift in Sources */,
+				90FCD4EC27149C6D00E621C3 /* DbQueries.swift in Sources */,
 				90225F102708AA6C003E9E9B /* UserForm.swift in Sources */,
 				90C020A6270E811100941115 /* Deposit.swift in Sources */,
 				90C020AA270E824300941115 /* TransferAgAcc.swift in Sources */,

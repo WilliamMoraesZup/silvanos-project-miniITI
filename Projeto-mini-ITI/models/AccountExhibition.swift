@@ -13,7 +13,7 @@ struct AccountExhibition {
     let name : String
     let acc : Int
     let agency : Int
-    let balance : Int
+ private   let balance : Int
     
     init (user : UserModel) {
         
@@ -25,5 +25,15 @@ struct AccountExhibition {
         balance = user.account.balance
     }
     
-    
+    func showBalance() -> String {
+        
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        // localize to your grouping and decimal separator
+        currencyFormatter.locale = Locale.current
+        let priceString = currencyFormatter.string(from: NSNumber(value: balance))!
+        
+        return priceString
+    }
 }

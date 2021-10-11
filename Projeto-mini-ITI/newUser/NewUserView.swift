@@ -18,10 +18,10 @@ Bem vindo: \(acc.name)
 Agencia:   \(acc.agency)
 Conta:     \(acc.acc)
 
-                   Saldo: \(acc.balance)
+                   Saldo: \(acc.showBalance())
 """)
-        
     }
+    
     func inputName() -> String? {
         print("\nDigite seu nome..")
      

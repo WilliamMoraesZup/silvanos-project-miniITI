@@ -23,12 +23,10 @@ struct TransferAgAcc {
 //        }
         
         guard let toAccount = view.inputAccToTransfer() else {
-            return view.invalidAcc()
-        
-        
+            return view.invalidAcc() 
         }
         
-        if (!Database.instance.accountExists(value: toAccount)){
+        if (!DbQueries().existsByAccount(value: toAccount)){
             return view.accountNotFound()
         
         }
@@ -37,7 +35,7 @@ struct TransferAgAcc {
             return view.invalidAmmount()
         }
         
-        if Database.instance.validateTransfer(agency: toAgency, acc: toAccount, ammount: ammount, loggedUser : loggedUser){
+        if DbQueries().validateTransfer(agency: toAgency, acc: toAccount, ammount: ammount, loggedUser : loggedUser){
             
             view.sucessTransfer()
             

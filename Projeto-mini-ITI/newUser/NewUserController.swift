@@ -38,7 +38,7 @@ struct NewUserController{
                 return receiveDocument()
             }
             
-            if  Database.instance.documentAlreadyExists(value: document){
+            if  DbQueries().existsByDocument(value: document){
                 newUserView.errorDocumentAlreadyExists()
                 HomeViewController().startMainMenu()
             }
@@ -106,10 +106,7 @@ struct NewUserController{
         
         Database.instance.userDB.append(unwrapUser) // salva no banco de dados estatico
         
-        
         newUserView.showAccountStatus(acc: AccountExhibition(user: unwrapUser))
-        
-        
         UserMenuController().startUserMenu(loggedUser: unwrapUser) // inicia o controller do usuario logado
         
         

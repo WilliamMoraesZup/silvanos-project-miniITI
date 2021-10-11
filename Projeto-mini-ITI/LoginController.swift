@@ -20,7 +20,7 @@ class LoginController {
             view.errorInvalidPass() }
         
         
-    let loggedUser = Database.instance.validateLogin(userDocument: user, pass: password)
+    let loggedUser = DbQueries().findUserByDocumentAndPassword(userDocument: user, pass: password)
             
         
         if let validUser = loggedUser {
