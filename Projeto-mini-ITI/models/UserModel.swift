@@ -41,6 +41,17 @@ class UserModel {
         self.pix.append(pixKey)
     }
     
+    func returnFormatedBalance() -> String{
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        // localize to your grouping and decimal separator
+        currencyFormatter.locale = Locale.current
+        let priceString = currencyFormatter.string(from: NSNumber(value: self.account.balance))!
+        
+        return priceString
+    }
+    
     func creditValue(value : Int){
         self.account.balance += value
     }

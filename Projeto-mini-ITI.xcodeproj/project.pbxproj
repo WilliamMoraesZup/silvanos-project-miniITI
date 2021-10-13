@@ -108,13 +108,13 @@
 				90225F132708BD67003E9E9B /* userMenuScreen */,
 				900EFEEB27079EDA006FB291 /* newUserScreen */,
 				900EFEE8270793AF006FB291 /* mainMenuScreen */,
-				900EFEE727075CC9006FB291 /* models */,
+				900EFEE727075CC9006FB291 /* Models */,
 				900EFED3270600F0006FB291 /* main.swift */,
 			);
 			path = "Projeto-mini-ITI";
 			sourceTree = "<group>";
 		};
-		900EFEE727075CC9006FB291 /* models */ = {
+		900EFEE727075CC9006FB291 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				900EFEE02706339F006FB291 /* Account.swift */,
@@ -122,7 +122,7 @@
 				90225F112708AAA6003E9E9B /* UserModel.swift */,
 				902CAB4C2711D9990057083F /* AccountExhibition.swift */,
 			);
-			path = models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		900EFEE8270793AF006FB291 /* mainMenuScreen */ = {
