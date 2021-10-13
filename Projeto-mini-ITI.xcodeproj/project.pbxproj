@@ -10,8 +10,8 @@
 		900EFED4270600F0006FB291 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFED3270600F0006FB291 /* main.swift */; };
 		900EFEDD27062A3C006FB291 /* NewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEDC27062A3C006FB291 /* NewUserController.swift */; };
 		900EFEE12706339F006FB291 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEE02706339F006FB291 /* Account.swift */; };
-		900EFEEA270793BD006FB291 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEE9270793BD006FB291 /* HomeView.swift */; };
-		900EFEED2707D9FD006FB291 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEEC2707D9FD006FB291 /* HomeViewController.swift */; };
+		900EFEEA270793BD006FB291 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEE9270793BD006FB291 /* MainMenuView.swift */; };
+		900EFEED2707D9FD006FB291 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEEC2707D9FD006FB291 /* MainMenuController.swift */; };
 		900EFEEF2707DC2C006FB291 /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFEEE2707DC2C006FB291 /* NewUserView.swift */; };
 		90225F102708AA6C003E9E9B /* UserForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90225F0F2708AA6C003E9E9B /* UserForm.swift */; };
 		90225F122708AAA6003E9E9B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90225F112708AAA6003E9E9B /* UserModel.swift */; };
@@ -49,8 +49,8 @@
 		900EFED3270600F0006FB291 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		900EFEDC27062A3C006FB291 /* NewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserController.swift; sourceTree = "<group>"; };
 		900EFEE02706339F006FB291 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		900EFEE9270793BD006FB291 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		900EFEEC2707D9FD006FB291 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		900EFEE9270793BD006FB291 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		900EFEEC2707D9FD006FB291 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		900EFEEE2707DC2C006FB291 /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
 		90225F0F2708AA6C003E9E9B /* UserForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForm.swift; sourceTree = "<group>"; };
 		90225F112708AAA6003E9E9B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -106,20 +106,12 @@
 				90C0209F270DD84600941115 /* loginScreen */,
 				90678653270A2FA9000A3CAA /* DB */,
 				90225F132708BD67003E9E9B /* userMenuScreen */,
-				900EFEEB27079EDA006FB291 /* newUser */,
+				900EFEEB27079EDA006FB291 /* newUserScreen */,
 				900EFEE8270793AF006FB291 /* mainMenuScreen */,
 				900EFEE727075CC9006FB291 /* models */,
-				900EFEE62707583A006FB291 /* MainMenuOptions */,
 				900EFED3270600F0006FB291 /* main.swift */,
 			);
 			path = "Projeto-mini-ITI";
-			sourceTree = "<group>";
-		};
-		900EFEE62707583A006FB291 /* MainMenuOptions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MainMenuOptions;
 			sourceTree = "<group>";
 		};
 		900EFEE727075CC9006FB291 /* models */ = {
@@ -136,19 +128,19 @@
 		900EFEE8270793AF006FB291 /* mainMenuScreen */ = {
 			isa = PBXGroup;
 			children = (
-				900EFEE9270793BD006FB291 /* HomeView.swift */,
-				900EFEEC2707D9FD006FB291 /* HomeViewController.swift */,
+				900EFEE9270793BD006FB291 /* MainMenuView.swift */,
+				900EFEEC2707D9FD006FB291 /* MainMenuController.swift */,
 			);
 			path = mainMenuScreen;
 			sourceTree = "<group>";
 		};
-		900EFEEB27079EDA006FB291 /* newUser */ = {
+		900EFEEB27079EDA006FB291 /* newUserScreen */ = {
 			isa = PBXGroup;
 			children = (
 				900EFEDC27062A3C006FB291 /* NewUserController.swift */,
 				900EFEEE2707DC2C006FB291 /* NewUserView.swift */,
 			);
-			path = newUser;
+			path = newUserScreen;
 			sourceTree = "<group>";
 		};
 		90225F132708BD67003E9E9B /* userMenuScreen */ = {
@@ -269,9 +261,9 @@
 				90FCD4EE27170D6E00E621C3 /* ExcludeAccount.swift in Sources */,
 				90225F152708BD7D003E9E9B /* UserMenuView.swift in Sources */,
 				90678656270A2FBE000A3CAA /* Database.swift in Sources */,
-				900EFEEA270793BD006FB291 /* HomeView.swift in Sources */,
+				900EFEEA270793BD006FB291 /* MainMenuView.swift in Sources */,
 				900EFEDD27062A3C006FB291 /* NewUserController.swift in Sources */,
-				900EFEED2707D9FD006FB291 /* HomeViewController.swift in Sources */,
+				900EFEED2707D9FD006FB291 /* MainMenuController.swift in Sources */,
 				900EFED4270600F0006FB291 /* main.swift in Sources */,
 				904464242710D0E70055B757 /* Api.swift in Sources */,
 				900EFEEF2707DC2C006FB291 /* NewUserView.swift in Sources */,

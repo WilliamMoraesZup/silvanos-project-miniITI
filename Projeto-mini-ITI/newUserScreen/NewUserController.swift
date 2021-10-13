@@ -9,6 +9,7 @@ import Foundation
 
 
 struct NewUserController{
+    let backTo  = HomeViewController()
     
     func startForm(){
         let newUserView = NewUserView()
@@ -21,14 +22,22 @@ struct NewUserController{
         let validTel = receiveTel()
         let validIncome = receiveIncome()
   
+       
         
         func receiveName() -> String  {
-            guard  let  name = newUserView.inputName(), name.count > 3
-            else {
-                newUserView.errorName()
-                return receiveName()
+            if let name =  newUserView.inputName(){
+                if name == "0" {
+                    backTo.startMainMenu()
+                     }
+                else
+                if  name.count > 3 {
+                    return name
             }
-            return name
+             
+            }
+            newUserView.errorName()
+            return receiveName()
+       
         }
         
         func receiveDocument() -> Int  {

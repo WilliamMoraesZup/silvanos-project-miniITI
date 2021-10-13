@@ -149,6 +149,7 @@ Digite a sua chave..
     func inputAmmountToTransferByPix() -> Int? {
         print("""
             Digite a quantia a ser transferida..
+            
             """)
         
         return Int(readLine() ?? String())

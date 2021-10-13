@@ -7,8 +7,8 @@
 
 
 // CLASSE CRIADA PARA TESTAR A REQUISIÇAO PARA API EXTERNA
-// PARA SER USADA FUTURAMENTE, PREENCHE AS AGENCIAS
-// E USUARIOS CADASTRADOS
+// PARA SER USADA FUTURAMENTE PRA ALIMENTAR AGENCIAS E USUARIOS
+ 
 
 
 import Foundation
@@ -21,6 +21,7 @@ struct Api {
 //            return
 //        }
         
+        // FORMA 1
       let URL = URL(string: "http://6160395dfaa03600179fb95d.mockapi.io/api/users/users")
       
         //Cria a representacão da requisição
@@ -48,7 +49,9 @@ struct Api {
         task.resume()
         
     }
-
+    
+    
+    // FORMA 2
     func pegaApi(){
         let url = "http://6160395dfaa03600179fb95d.mockapi.io/api/users/users"
 

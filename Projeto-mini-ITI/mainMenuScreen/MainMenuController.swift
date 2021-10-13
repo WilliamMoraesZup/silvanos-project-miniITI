@@ -9,10 +9,7 @@ import Foundation
 
 struct HomeViewController {
  
-    
-   
-    
-    func startMainMenu(){
+   func startMainMenu(){
         /**
          a funçao faz um loop e a cada passagem do loop ele chama o menu principal.
          o loop chama o menu principal
@@ -24,26 +21,23 @@ struct HomeViewController {
         */
          
         
-        let homeView = HomeView()
+        let homeView = MainMenuView()
         
         while (true) {
             // esse view retorna o numero escolhido no menu principal
             let userSelection = homeView.showMainMenu()
             
             if let validSelected = userSelection  {
-                if(  selectedHandler(option: validSelected) == false)
-                {
+                if(  selectedHandler(option: validSelected) == false) {
                     continue
                 }
                 else {
                     break
                 }
             }
-            HomeView().showInvalidOption()
+            MainMenuView().showInvalidOption()
             continue
         }
-        
-        
     }
     
     
@@ -62,11 +56,12 @@ struct HomeViewController {
             print("SAIR")
         
         default:
-            HomeView().showInvalidOption()
+            MainMenuView().showInvalidOption()
+            
             return false
         }
         
-        print("erro")
+        print("Analisar por que caiu aqui")
         return true
     }
      

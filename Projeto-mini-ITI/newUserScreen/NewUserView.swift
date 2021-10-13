@@ -10,9 +10,7 @@ import Foundation
 struct NewUserView {
     
     func showAccountStatus(acc: AccountExhibition){
-       // Vou refatorar pois nao quero receber o UserModel aqui
-         
-        print("""
+     print("""
 
 Bem vindo: \(acc.name)
 Agencia:   \(acc.agency)
@@ -24,43 +22,43 @@ Conta:     \(acc.acc)
     
     func inputName() -> String? {
         print("\nDigite seu nome..")
-     
-        return readLine()
         
+        return readLine() 
     }
     
     func inputDocumentNumber() -> Int? {
         print("\nDigite seu CPF, somente numeros..")
-         
-        return Int(readLine() ?? String())
         
+        return Int(readLine() ?? String())
     }
+    
     func inputPassword() -> Int? {
         print("\nDigite sua senha, deve possuir no minimo 6 numeros..")
         
         return Int(readLine() ?? String())
-        
     }
+    
     func inputAddress() -> String? {
         print("\nDigite seu endereço..")
         
         return  readLine()
-        
     }
+    
     func inputOccupation() -> String? {
         print("\nDigite sua ocupação..")
         
         return  readLine()
-        
     }
     
     func inputTel() -> Int? {
         print("\nDigite seu telefone.. (somente números)")
+       
         return Int(readLine() ?? String())
     }
     
     func inputIncome() -> Double? {
         print("\nDigite sua renda.. ")
+       
         return Double(readLine() ?? String())
     }
     
@@ -75,6 +73,7 @@ Conta:     \(acc.acc)
     func errorPassword(){
         print("A senha deve conter no minimo 6 numeros. Digite novamente.. \n")
     }
+    
     func errorAddress(){
         print("Endereço inválido.. \n")
     }
@@ -82,24 +81,15 @@ Conta:     \(acc.acc)
     func errorOcupation(){
         print("Ocupação inválida.. \n")
     }
-    
-    
+     
     func errorIncome(){
         print("Renda inválida.. \n")
     }
-    
-    
+     
     func errorTel(){
         print("Telefone inválido, digite apenas numeros.. \n")
     }
-    // teste
-    func errorGeneric(invalidValue : String ){
-        print("Valor de: \(invalidValue) inválido.. tente novamente \n")
-    }
-    
-    
-    
-    
+  
     func errorDocumentAlreadyExists(){
         print("Esse CPF já se encontra cadastrado.. \n")
     }

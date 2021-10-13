@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct HomeView {
+struct MainMenuView {
     
     
     func showMainMenu() -> Int? {
         
         print("""
+    
     Bem vindo ao novo aplicativo do ITI
     Digite a opção desejada
     1 - ▶️ Entrar
