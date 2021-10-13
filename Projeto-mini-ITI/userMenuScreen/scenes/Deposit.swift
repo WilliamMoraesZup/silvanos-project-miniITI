@@ -17,9 +17,7 @@ func deposit(loggedUser : UserModel) {
         loggedUser.creditValue(value: deposit)
         view.showDepositSucess()
         
-        let balance = String(loggedUser.account.balance)
-        
-        UserMenuView().showBalance(value: balance )
+        UserMenuView().showBalance(value: loggedUser.returnFormatedBalance() )
         
     }
     else { print("valor invalido")  }

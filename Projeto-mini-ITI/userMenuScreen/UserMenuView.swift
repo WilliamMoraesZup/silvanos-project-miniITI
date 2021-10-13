@@ -99,11 +99,12 @@ Digite a sua chave..
     func showBalance(value : String){
         print("""
             
-            Seu saldo:   R$ \(value) reais.
+            Seu saldo: \(value)
             
             """)
         
     }
+    
     func showPixRegisterSucess( ){
         
         print("""
@@ -142,6 +143,7 @@ Digite a sua chave..
     func inputPixKeyToTransfer() -> String? {
         print("""
             Digite o pix da conta de destino..
+            
             """)
         
         return readLine() ?? String()
@@ -182,7 +184,7 @@ Digite a sua chave..
             """)
     }
     
-    func sucessTransfer(){
+    func successTransfer(){
         print("""
             Transferencia realizada com sucesso..
             

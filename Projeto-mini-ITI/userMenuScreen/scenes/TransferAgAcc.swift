@@ -32,9 +32,9 @@ struct TransferAgAcc {
         
         if DbQueries().validateTransfer(agency: toAgency, acc: toAccount, ammount: ammount, loggedUser : loggedUser){
             
-            view.sucessTransfer()
+            view.successTransfer()
             
-            view.showBalance(value: String( loggedUser.account.balance))
+            view.showBalance(value: loggedUser.returnFormatedBalance())
         }
         else {
             view.errorTransfer()

@@ -10,8 +10,7 @@ import Foundation
 struct Balance {
     
     func balance(loggedUser : UserModel){
-        let balance = String(loggedUser.account.balance)
-        UserMenuView().showBalance(value: balance )
+            UserMenuView().showBalance(value: loggedUser.returnFormatedBalance() )
         
     }
 }
