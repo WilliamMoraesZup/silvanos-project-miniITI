@@ -30,7 +30,7 @@ struct UserMenuController {
         switch option {
         case 1: //Transferir Agencia / Conta
             TransferAgAcc().transfer(loggedUser: loggedUser)
-            
+            self.startUserMenu(loggedUser: loggedUser)
             
         case 2: //Pagar ou Transferir com Pix
             PaymentByPix().paymentPix(loggedUser: loggedUser)
@@ -51,8 +51,9 @@ struct UserMenuController {
             
             
         case 6: // Excluir Conta
-            print("Excluir conta")
-        // TODO: conta deve estar zerada
+          ExcludeAccount(loggedUser: loggedUser)
+            
+     
         
         
         case 7: // Sair
@@ -62,8 +63,9 @@ struct UserMenuController {
         default:
             print("invalido")
             
-        } 
-        self.startUserMenu(loggedUser: loggedUser)
+        }
+        
+        HomeViewController().startMainMenu()
     }
      
     

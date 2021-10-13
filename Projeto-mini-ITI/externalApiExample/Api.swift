@@ -5,6 +5,12 @@
 //  Created by William Moraes da Silva on 08/10/21.
 //
 
+
+// CLASSE CRIADA PARA TESTAR A REQUISIÇAO PARA API EXTERNA
+// PARA SER USADA FUTURAMENTE, PREENCHE AS AGENCIAS
+// E USUARIOS CADASTRADOS
+
+
 import Foundation
 struct Api {
     func getRequest(url: String,

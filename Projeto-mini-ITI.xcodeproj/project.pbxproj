@@ -29,6 +29,7 @@
 		90C020AC270E85DC00941115 /* PaymentByPix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020AB270E85DC00941115 /* PaymentByPix.swift */; };
 		90C020AE270E864900941115 /* NewPixKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C020AD270E864900941115 /* NewPixKey.swift */; };
 		90FCD4EC27149C6D00E621C3 /* DbQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FCD4EB27149C6D00E621C3 /* DbQueries.swift */; };
+		90FCD4EE27170D6E00E621C3 /* ExcludeAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FCD4ED27170D6E00E621C3 /* ExcludeAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		90C020AB270E85DC00941115 /* PaymentByPix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentByPix.swift; sourceTree = "<group>"; };
 		90C020AD270E864900941115 /* NewPixKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPixKey.swift; sourceTree = "<group>"; };
 		90FCD4EB27149C6D00E621C3 /* DbQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbQueries.swift; sourceTree = "<group>"; };
+		90FCD4ED27170D6E00E621C3 /* ExcludeAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcludeAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				90C020A9270E824300941115 /* TransferAgAcc.swift */,
 				90C020AD270E864900941115 /* NewPixKey.swift */,
 				90C020AB270E85DC00941115 /* PaymentByPix.swift */,
+				90FCD4ED27170D6E00E621C3 /* ExcludeAccount.swift */,
 			);
 			path = scenes;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				900EFEE12706339F006FB291 /* Account.swift in Sources */,
+				90FCD4EE27170D6E00E621C3 /* ExcludeAccount.swift in Sources */,
 				90225F152708BD7D003E9E9B /* UserMenuView.swift in Sources */,
 				90678656270A2FBE000A3CAA /* Database.swift in Sources */,
 				900EFEEA270793BD006FB291 /* HomeView.swift in Sources */,

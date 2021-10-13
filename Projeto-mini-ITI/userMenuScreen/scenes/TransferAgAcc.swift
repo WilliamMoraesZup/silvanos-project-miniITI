@@ -17,11 +17,6 @@ struct TransferAgAcc {
             return view.invalidAgency()
         }
         
-//        if (!Database.instance.agencyExists(value: toAgency)) {
-//            print("Agencia não encontrada")
-//            return
-//        }
-        
         guard let toAccount = view.inputAccToTransfer() else {
             return view.invalidAcc() 
         }

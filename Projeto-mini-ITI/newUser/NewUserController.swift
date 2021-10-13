@@ -104,7 +104,7 @@ struct NewUserController{
             return  print("TO-DO erro apos criar o usuario, show system error")
         }
         
-        Database.instance.userDB.append(unwrapUser) // salva no banco de dados estatico
+        DbQueries().insertIntoUserDB(user: unwrapUser) // salva no banco de dados estatico
         
         newUserView.showAccountStatus(acc: AccountExhibition(user: unwrapUser))
         UserMenuController().startUserMenu(loggedUser: unwrapUser) // inicia o controller do usuario logado

@@ -184,9 +184,23 @@ Digite a sua chave..
     func sucessTransfer(){
         print("""
             Transferencia realizada com sucesso..
+            
             """)
     }
-    
+ 
+    func sucessAccountExcluded(){
+        print("""
+            Conta finalizada com sucesso..
+            
+            """)
+    }
+    func errorBalancesNeedsToBeZero(){
+      print("""
+        Você precisa deixar seu saldo zerado antes de finalizar sua conta
+        
+        """)
+    }
+   
     func errorTransfer(){
         print("""
             Houve um problema com a transferencia, tente novamente..

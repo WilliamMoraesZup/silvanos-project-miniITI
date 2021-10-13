@@ -8,7 +8,21 @@
 import Foundation
 struct DbQueries {
     
-    let userDB = Database.instance.userDB
+    var userDB = Database.instance.userDB
+   
+    
+    func insertIntoUserDB(user : UserModel)   {
+        Database.instance.userDB.append(user)
+    }
+    
+    func deleteByDocument(user : UserModel)   {
+        guard let index = Database.instance.userDB.firstIndex(where: { $0.documentNumber == user.documentNumber})
+        else {
+            return print("Conta nao encontrada")
+        }
+        Database.instance.userDB.remove(at: index)
+     
+    }
     
     func existsByDocument(value : Int) -> Bool {
         return userDB.contains(where: { $0.documentNumber == value })
